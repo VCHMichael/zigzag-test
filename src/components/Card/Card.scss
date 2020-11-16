@@ -1,0 +1,86 @@
+.card-main {
+  width: 164px;
+  height: 186px;
+  background: #3C4561;
+  border: 2px solid #91ACD4;
+  box-sizing: border-box;
+  box-shadow: 8px 8px 20px rgba(24, 28, 38, 0.5);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+  position: relative;
+  &__round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3C4561;
+    border: 2px solid #91ACD4;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+
+  }
+  &--active {
+    position: relative;
+    border: 2px solid #83F6B1;
+    padding: 30px;
+    border-radius: 5px;
+    width: 204px;
+    height: 218px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    & .card-main__receive-block__amount {
+      font-size: 36px;
+    }
+    & .card-main__round {
+      background: #83F6B1;
+      border: 2px solid #83F6B1
+    }
+  }
+  &__deposit-block {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    &__text {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      color: #EEEEEE;
+      background: unset;
+    }
+    &__amount {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 22px;
+      color: #EEEEEE;
+    }
+  }
+  &__receive-block {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &__text {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      color: #83F6B1;
+    }
+
+    &__amount {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 22px;
+      color: #83F6B1;
+    }
+  }
+}

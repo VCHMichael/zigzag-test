@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import React, {useState} from 'react'
 import './App.css';
+import Button from "./components/Button/Button";
+import Modal from "./components/Modal/Modal";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [isOpenModal, setOpenModal] = useState(false)
+    const handleToggleModal = () => {
+        setOpenModal(!isOpenModal)
+    }
+
+    return (
+        <>
+            <Button text='Открыть модалку' onCLick={handleToggleModal}/>
+            {isOpenModal && <Modal closeFn={handleToggleModal}/>}
+        </>
+    );
 }
 
 export default App;

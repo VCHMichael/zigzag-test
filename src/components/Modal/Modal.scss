@@ -1,0 +1,100 @@
+.main-modal {
+  width: 695px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  $border: 4px;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    margin: -$border;
+    background: linear-gradient(177.76deg, #2E354B 0%, #30374C 100%);
+    box-shadow: 25px 25px 50px rgba(24, 28, 38, 0.5);
+    border-radius: 10px;
+  }
+  &__select-payment {
+    margin: 30px 0;
+    background: #3C4561;
+    border-radius: 5px;
+    padding: 12px 10px;
+    color: #fff;
+    width: 60%;
+  }
+  &__header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__title {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      text-align: center;
+      color: #fff
+    }
+    &__topPercent {
+      padding: 9px 10px;
+      background: #83F6B1;
+      border-radius: 0px 0px 5px 5px;
+      font-weight: 600;
+    }
+  }
+  &__body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &__cards {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__result-text {
+      margin: 30px 0;
+      color: #fff;
+      font-weight: bold;
+    }
+  }
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 17px 0 55px 0;
+    &__text {
+      font-weight: 500;
+      font-size: 14px;
+      text-align: center;
+      color: #91ACD4;
+      opacity: 0.5;
+    }
+    &__link {
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #91ACD4;
+      opacity: 0.7;
+      text-decoration: none;
+      border-bottom: 1px dashed #91ACD4;
+    }
+  }
+  &__close-btn {
+    color: #91ACD4;
+    opacity: 0.5;
+    position: absolute;
+    font-size: 22px;
+    border: none;
+    top: 10px;
+    right: 10px;
+    outline: none;
+    background: none;
+    cursor: pointer;
+  }
+}
